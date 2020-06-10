@@ -6,10 +6,10 @@ namespace AccessControl.BusinessRule.Models
     {
         public Person()
         {
-            Id = Guid.NewGuid();
+            Id = Guid.NewGuid().ToString().ToLower();
         }
 
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
     }
 }

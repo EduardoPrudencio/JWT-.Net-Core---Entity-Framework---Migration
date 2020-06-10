@@ -43,25 +43,32 @@ namespace AccessControl.Controllers
 
         // POST: api/User
         [HttpPost]
-        public async Task<ActionResult<User>> Post([FromBody] User user, [FromServices] AccessContext context)
+        public async Task<ActionResult<User>> Post([FromBody] CreateUser createUser, [FromServices] AccessContext context)
         {
+            User user = new User
+            {
+                Name = createUser.Name,
+                LastName = createUser.LastName,
+                BirthDate = createUser.BirthDate
+            };
+
             var response = await context.User.AddAsync(user);
-            await context.SaveChangesAsync();
+
 
             var identityUser = new IdentityUser
             {
-                UserName = user.Name,
-                Email = "teste@teste.com",
+                Id = user.Id,
+                UserName = createUser.Name,
+                Email = createUser.Email,
                 EmailConfirmed = true,
             };
 
-            string senha = "1001";
 
-            var result = await _userManager.CreateAsync(identityUser, senha.ToString());
+            var result = await _userManager.CreateAsync(identityUser, createUser.Password);
 
-            if (!result.Succeeded) return BadRequest();
+            if (!result.Succeeded) return BadRequest(result.Errors);
 
-
+            await context.SaveChangesAsync();
 
             return Ok(response.Entity);
         }
