@@ -7,6 +7,9 @@ D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.r
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.runtimeconfig.dev.json
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.pdb
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
@@ -18,6 +21,7 @@ D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.CodeA
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
@@ -27,6 +31,8 @@ D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Exten
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
@@ -113,10 +119,14 @@ D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\runtimes\unix\l
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.BusinessRule.dll
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.Infrastructure.dll
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.BusinessRule.pdb
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.Infrastructure.pdb
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.pdb
 D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.csprojAssemblyReference.cache
+D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.csproj.CoreCompileInputs.cache
+D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.MvcApplicationPartsAssemblyInfo.cache
 D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.AssemblyInfoInputs.cache
 D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.AssemblyInfo.cs
 D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.RazorTargetAssemblyInfo.cache
@@ -126,13 +136,3 @@ D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\staticwebassets
 D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.dll
 D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.pdb
 D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.genruntimeconfig.cache
-D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
-D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.csproj.CoreCompileInputs.cache
-D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.MvcApplicationPartsAssemblyInfo.cache
-D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.dll
-D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.pdb
-D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
-D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
-D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
-D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
-D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

@@ -80,7 +80,7 @@ namespace AccessControl.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<User>> Login([FromBody] LoginUser loginUser, [FromServices] AccessContext context)
         {
-            var result = await _singnManager.PasswordSignInAsync(loginUser.Login.Trim(), loginUser.password.Trim(), false, true);
+            var result = await _singnManager.PasswordSignInAsync(loginUser.Login.Trim(), loginUser.Password.Trim(), false, true);
 
             if (result.Succeeded)
                 return Ok();
