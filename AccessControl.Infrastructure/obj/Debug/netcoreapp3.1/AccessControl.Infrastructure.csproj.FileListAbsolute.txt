@@ -1,0 +1,15 @@
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\bin\Debug\netcoreapp3.1\AccessControl.Infrastructure.deps.json
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\bin\Debug\netcoreapp3.1\AccessControl.Infrastructure.dll
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\bin\Debug\netcoreapp3.1\AccessControl.Infrastructure.pdb
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\obj\Debug\netcoreapp3.1\AccessControl.Infrastructure.csprojAssemblyReference.cache
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\obj\Debug\netcoreapp3.1\AccessControl.Infrastructure.AssemblyInfoInputs.cache
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\obj\Debug\netcoreapp3.1\AccessControl.Infrastructure.AssemblyInfo.cs
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\obj\Debug\netcoreapp3.1\AccessControl.Infrastructure.csproj.CopyComplete
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\obj\Debug\netcoreapp3.1\AccessControl.Infrastructure.dll
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\obj\Debug\netcoreapp3.1\AccessControl.Infrastructure.pdb
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\bin\Debug\netcoreapp3.1\AccessControl.Infrastructure.runtimeconfig.json
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\bin\Debug\netcoreapp3.1\AccessControl.Infrastructure.runtimeconfig.dev.json
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\obj\Debug\netcoreapp3.1\AccessControl.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\obj\Debug\netcoreapp3.1\AccessControl.Infrastructure.genruntimeconfig.cache
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\bin\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.dll
+D:\Projetos\Inovaideia\Api\AccessControl.Infrastructure\bin\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.pdb

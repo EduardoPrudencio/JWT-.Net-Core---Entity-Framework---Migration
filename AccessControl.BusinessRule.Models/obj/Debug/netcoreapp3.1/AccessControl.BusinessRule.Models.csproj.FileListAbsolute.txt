@@ -1,0 +1,9 @@
+D:\Projetos\Inovaideia\Api\AccessControl.BusinessRule.Models\bin\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.deps.json
+D:\Projetos\Inovaideia\Api\AccessControl.BusinessRule.Models\bin\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.dll
+D:\Projetos\Inovaideia\Api\AccessControl.BusinessRule.Models\bin\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.pdb
+D:\Projetos\Inovaideia\Api\AccessControl.BusinessRule.Models\obj\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.csprojAssemblyReference.cache
+D:\Projetos\Inovaideia\Api\AccessControl.BusinessRule.Models\obj\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.csproj.CoreCompileInputs.cache
+D:\Projetos\Inovaideia\Api\AccessControl.BusinessRule.Models\obj\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.AssemblyInfoInputs.cache
+D:\Projetos\Inovaideia\Api\AccessControl.BusinessRule.Models\obj\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.AssemblyInfo.cs
+D:\Projetos\Inovaideia\Api\AccessControl.BusinessRule.Models\obj\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.dll
+D:\Projetos\Inovaideia\Api\AccessControl.BusinessRule.Models\obj\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.pdb
