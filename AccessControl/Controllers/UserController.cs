@@ -58,8 +58,8 @@ namespace AccessControl.Controllers
             var identityUser = new IdentityUser
             {
                 Id = user.Id,
-                UserName = createUser.Name,
-                Email = createUser.Email,
+                UserName = createUser.Email.Trim(),
+                Email = createUser.Email.Trim(),
                 EmailConfirmed = true,
             };
 
@@ -71,6 +71,19 @@ namespace AccessControl.Controllers
             await context.SaveChangesAsync();
 
             return Ok(response.Entity);
+        }
+
+        [HttpPost("login")]
+        public async Task<ActionResult<User>> Login([FromBody] LoginUser loginUser, [FromServices] AccessContext context)
+        {
+            var result = await _singnManager.PasswordSignInAsync(loginUser.Login.Trim(), loginUser.password.Trim(), false, true);
+
+            if (result.Succeeded)
+                return Ok();
+
+            return BadRequest();
+
+
         }
 
         // PUT: api/User/5
