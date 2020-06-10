@@ -2,6 +2,7 @@
 using AccessControl.Infrastructure;
 using AccessControl.Infrastructure.Interfaces;
 using AccessControl.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
@@ -13,11 +14,14 @@ namespace AccessControl.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
-
+        private readonly SignInManager<IdentityUser> _singnManager;
+        private readonly UserManager<IdentityUser> _userManager;
         private AccessContext _context;
 
-        public UserController(AccessContext context)
+        public UserController(AccessContext context, SignInManager<IdentityUser> singnManager, UserManager<IdentityUser> userManager)
         {
+            _singnManager = singnManager;
+            _userManager = userManager;
             _context = context;
             _userRepository = new UserRepository(_context);
         }
@@ -44,7 +48,22 @@ namespace AccessControl.Controllers
             var response = await context.User.AddAsync(user);
             await context.SaveChangesAsync();
 
-            return response.Entity;
+            var identityUser = new IdentityUser
+            {
+                UserName = user.Name,
+                Email = "teste@teste.com",
+                EmailConfirmed = true,
+            };
+
+            string senha = "1001";
+
+            var result = await _userManager.CreateAsync(identityUser, senha.ToString());
+
+            if (!result.Succeeded) return BadRequest();
+
+
+
+            return Ok(response.Entity);
         }
 
         // PUT: api/User/5
