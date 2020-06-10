@@ -27,6 +27,7 @@ namespace AccessControl
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<AccessContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("AccessControl")));
+            services.AddDbContext<IdentityContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("AccessControl")));
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddControllers();
 
