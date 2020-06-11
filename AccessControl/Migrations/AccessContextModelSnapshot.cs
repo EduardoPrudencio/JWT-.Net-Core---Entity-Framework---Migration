@@ -21,9 +21,8 @@ namespace AccessControl.Migrations
 
             modelBuilder.Entity("AccessControl.BusinessRule.Models.User", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("BirthDate")
                         .HasColumnType("datetime2");

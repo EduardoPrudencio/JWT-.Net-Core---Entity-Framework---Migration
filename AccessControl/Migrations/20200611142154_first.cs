@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace AccessControl.Migrations
 {
-    public partial class firstcommit : Migration
+    public partial class first : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -11,7 +11,7 @@ namespace AccessControl.Migrations
                 name: "User",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
+                    Id = table.Column<string>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
                     BirthDate = table.Column<DateTime>(nullable: false)

@@ -1,5 +1,7 @@
 using AccessControl.Configuration;
 using AccessControl.Infrastructure;
+using AccessControl.Infrastructure.Interfaces;
+using AccessControl.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
@@ -27,7 +29,7 @@ namespace AccessControl
         {
             services.AddDbContext<AccessContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("AccessControl")));
             services.AddDbContext<IdentityContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("AccessControl")));
-            //services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
 
             services.AddIdentity<IdentityUser, IdentityRole>()

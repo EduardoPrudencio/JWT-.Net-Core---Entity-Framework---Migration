@@ -82,6 +82,7 @@ namespace AccessControl.Controllers
         {
             var result = await _singnManager.PasswordSignInAsync(loginUser.Login.Trim(), loginUser.Password.Trim(), false, true);
 
+
             if (result.Succeeded)
                 return Ok();
 

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AccessControl.Migrations
 {
     [DbContext(typeof(AccessContext))]
-    [Migration("20200609222130_first-commit")]
-    partial class firstcommit
+    [Migration("20200611142154_first")]
+    partial class first
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,9 +23,8 @@ namespace AccessControl.Migrations
 
             modelBuilder.Entity("AccessControl.BusinessRule.Models.User", b =>
                 {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("BirthDate")
                         .HasColumnType("datetime2");
