@@ -1,10 +1,16 @@
 ﻿using AccessControl.BusinessRule.Models;
+using AccessControl.Configuration;
 using AccessControl.Infrastructure;
 using AccessControl.Infrastructure.Interfaces;
 using AccessControl.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace AccessControl.Controllers
@@ -16,14 +22,16 @@ namespace AccessControl.Controllers
         private readonly IUserRepository _userRepository;
         private readonly SignInManager<IdentityUser> _singnManager;
         private readonly UserManager<IdentityUser> _userManager;
+        private AppSettings _appSettings;
         private AccessContext _context;
 
-        public UserController(AccessContext context, SignInManager<IdentityUser> singnManager, UserManager<IdentityUser> userManager)
+        public UserController(AccessContext context, SignInManager<IdentityUser> singnManager, UserManager<IdentityUser> userManager, IOptions<AppSettings> appSettings)
         {
             _singnManager = singnManager;
             _userManager = userManager;
             _context = context;
             _userRepository = new UserRepository(_context);
+            _appSettings = appSettings.Value;
         }
 
         // GET: api/User
@@ -72,7 +80,10 @@ namespace AccessControl.Controllers
 
             await context.SaveChangesAsync();
 
-            return Ok(response.Entity);
+
+            string token = await GetToken(createUser.Email);
+
+            return Ok(token);
         }
 
         [HttpPost("login")]
@@ -82,23 +93,32 @@ namespace AccessControl.Controllers
 
 
             if (result.Succeeded)
-                return Ok();
+            {
+                string token = await GetToken(loginUser.Login);
+
+                var t = new TokenResponse(token);
+
+                return Ok(t);
+            }
 
             return BadRequest();
-
-
         }
 
-        // PUT: api/User/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] User user)
+        private async Task<string> GetToken(string userEmail)
         {
-        }
+            var user = await _userManager.FindByEmailAsync(userEmail);
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
 
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Issuer = _appSettings.Emissor,
+                Audience = _appSettings.ValidIn,
+                Expires = DateTime.UtcNow.AddHours(_appSettings.ExpirationHours),
+
+            };
+
+            return tokenHandler.WriteToken(tokenHandler.CreateToken(tokenDescriptor));
         }
     }
 }

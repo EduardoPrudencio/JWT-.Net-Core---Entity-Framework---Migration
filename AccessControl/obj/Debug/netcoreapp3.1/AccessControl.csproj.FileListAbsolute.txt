@@ -125,8 +125,6 @@ D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.B
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.Infrastructure.pdb
 D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\AccessControl.BusinessRule.Models.pdb
 D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.csprojAssemblyReference.cache
-D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.csproj.CoreCompileInputs.cache
-D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.MvcApplicationPartsAssemblyInfo.cache
 D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.AssemblyInfoInputs.cache
 D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.AssemblyInfo.cs
 D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.RazorTargetAssemblyInfo.cache
@@ -136,3 +134,12 @@ D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\staticwebassets
 D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.dll
 D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.pdb
 D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.genruntimeconfig.cache
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+D:\Projetos\Inovaideia\Api\AccessControl\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.csproj.CoreCompileInputs.cache
+D:\Projetos\Inovaideia\Api\AccessControl\obj\Debug\netcoreapp3.1\AccessControl.MvcApplicationPartsAssemblyInfo.cache
