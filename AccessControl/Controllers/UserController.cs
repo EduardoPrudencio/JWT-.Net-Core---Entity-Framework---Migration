@@ -2,7 +2,6 @@
 using AccessControl.Infrastructure;
 using AccessControl.Infrastructure.Interfaces;
 using AccessControl.Infrastructure.Repositories;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -28,7 +27,6 @@ namespace AccessControl.Controllers
         }
 
         // GET: api/User
-        [Authorize]
         [HttpGet]
         public async Task<ActionResult<List<User>>> Get()
         {

@@ -30,6 +30,7 @@ namespace AccessControl
             services.AddDbContext<AccessContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("AccessControl")));
             services.AddDbContext<IdentityContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("AccessControl")));
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IServiceRepository, ServiceRepository>();
 
 
             services.AddIdentity<IdentityUser, IdentityRole>()
