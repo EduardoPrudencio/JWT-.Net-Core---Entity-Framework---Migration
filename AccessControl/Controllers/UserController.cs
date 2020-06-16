@@ -83,7 +83,10 @@ namespace AccessControl.Controllers
 
             string token = await GetToken(createUser.Email);
 
-            return Ok(token);
+            var jwt = new TokenResponse(token);
+
+
+            return Ok(jwt);
         }
 
         [HttpPost("login")]
@@ -96,9 +99,9 @@ namespace AccessControl.Controllers
             {
                 string token = await GetToken(loginUser.Login);
 
-                var t = new TokenResponse(token);
+                var jwt = new TokenResponse(token);
 
-                return Ok(t);
+                return Ok(jwt);
             }
 
             return BadRequest();
@@ -115,7 +118,7 @@ namespace AccessControl.Controllers
                 Issuer = _appSettings.Emissor,
                 Audience = _appSettings.ValidIn,
                 Expires = DateTime.UtcNow.AddHours(_appSettings.ExpirationHours),
-
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
             };
 
             return tokenHandler.WriteToken(tokenHandler.CreateToken(tokenDescriptor));
