@@ -1,4 +1,5 @@
 ﻿using AccessControl.BusinessRule.Models;
+using AccessControl.Configuration;
 using AccessControl.Infrastructure;
 using AccessControl.Infrastructure.Interfaces;
 using AccessControl.Infrastructure.Repositories;
@@ -26,6 +27,7 @@ namespace AccessControl.Controllers
 
 
         // GET: api/Service
+        [ClaimsAuthorize("Services", "Consultar")]
         [HttpGet]
         public async Task<List<Service>> Get()
         {

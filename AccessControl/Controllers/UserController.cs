@@ -10,6 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -110,11 +111,15 @@ namespace AccessControl.Controllers
         private async Task<string> GetToken(string userEmail)
         {
             var user = await _userManager.FindByEmailAsync(userEmail);
+            var userClains = new ClaimsIdentity();
+            userClains.AddClaims(await _userManager.GetClaimsAsync(user));
+
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_appSettings.Secret);
 
             var tokenDescriptor = new SecurityTokenDescriptor
             {
+                Subject = userClains,
                 Issuer = _appSettings.Emissor,
                 Audience = _appSettings.ValidIn,
                 Expires = DateTime.UtcNow.AddHours(_appSettings.ExpirationHours),
