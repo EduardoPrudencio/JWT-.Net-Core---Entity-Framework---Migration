@@ -7,5 +7,7 @@ namespace AccessControl.Infrastructure.Interfaces
     public interface IUserRepository
     {
         Task<List<User>> GetAll();
+
+        Task<User> GetById(string id);
     }
 }

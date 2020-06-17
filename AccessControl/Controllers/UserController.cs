@@ -25,17 +25,18 @@ namespace AccessControl.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         private AppSettings _appSettings;
         private AccessContext _context;
+        private AuthenticatedUser _user;
 
-        public UserController(AccessContext context, SignInManager<IdentityUser> singnManager, UserManager<IdentityUser> userManager, IOptions<AppSettings> appSettings)
+        public UserController(AccessContext context, SignInManager<IdentityUser> singnManager, UserManager<IdentityUser> userManager, IOptions<AppSettings> appSettings, AuthenticatedUser user)
         {
             _singnManager = singnManager;
             _userManager = userManager;
             _context = context;
             _userRepository = new UserRepository(_context);
             _appSettings = appSettings.Value;
+            _user = user;
         }
 
-        // GET: api/User
         [HttpGet]
         public async Task<ActionResult<List<User>>> Get()
         {
@@ -44,15 +45,12 @@ namespace AccessControl.Controllers
         }
 
 
-        // GET: api/User/5
-
         [HttpGet("{id}", Name = "Get")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST: api/User
         [HttpPost]
         public async Task<ActionResult<User>> Post([FromBody] CreateUser createUser, [FromServices] AccessContext context)
         {
@@ -98,6 +96,12 @@ namespace AccessControl.Controllers
 
             if (result.Succeeded)
             {
+                var identityUser = await _userManager.FindByEmailAsync(loginUser.Login);
+
+                var userReceived = await _userRepository.GetById(identityUser.Id);
+
+                _user.sertUser(userReceived, loginUser.Login);
+
                 string token = await GetToken(loginUser.Login);
 
                 var jwt = new TokenResponse(token);

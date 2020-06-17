@@ -13,14 +13,11 @@ namespace AccessControl.Controllers
     [Authorize]
     [Route("api/services")]
     [ApiController]
-    public class ServiceController : ControllerBase
+    public class ServiceController : MainController
     {
         private readonly IServiceRepository _serviceRepository;
-        private AccessContext _context;
 
-
-
-        public ServiceController(AccessContext context)
+        public ServiceController(AccessContext context, AuthenticatedUser user) : base(user)
         {
             _serviceRepository = new ServiceRepository(context);
         }

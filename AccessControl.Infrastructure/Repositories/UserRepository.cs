@@ -21,5 +21,11 @@ namespace AccessControl.Infrastructure.Repositories
             return listOfUsers;
         }
 
+        public async Task<User> GetById(string id)
+        {
+            var users = await _context.User.FirstOrDefaultAsync(u => u.Id.Equals(id.Trim()));
+            return users;
+        }
+
     }
 }

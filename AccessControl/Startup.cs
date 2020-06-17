@@ -1,3 +1,4 @@
+using AccessControl.BusinessRule.Models;
 using AccessControl.Configuration;
 using AccessControl.Infrastructure;
 using AccessControl.Infrastructure.Interfaces;
@@ -64,6 +65,8 @@ namespace AccessControl
                     ValidIssuer = appSettings.Emissor,
                 };
             });
+
+            services.AddSingleton<AuthenticatedUser>();
 
             services.AddControllers();
 
