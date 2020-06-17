@@ -17,7 +17,8 @@ namespace AccessControl.Infrastructure.Repositories
 
         public async Task<List<User>> GetAll()
         {
-            return await _context.User.ToListAsync();
+            var listOfUsers = await _context.User.ToListAsync();
+            return listOfUsers;
         }
 
     }

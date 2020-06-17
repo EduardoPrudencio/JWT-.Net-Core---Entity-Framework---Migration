@@ -11,6 +11,7 @@ namespace AccessControl.Infrastructure
         }
 
         public DbSet<User> User { get; set; }
+        public DbSet<Service> Service { get; set; }
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
