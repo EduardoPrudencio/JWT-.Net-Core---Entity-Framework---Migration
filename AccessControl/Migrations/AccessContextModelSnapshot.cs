@@ -19,6 +19,25 @@ namespace AccessControl.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("AccessControl.BusinessRule.Models.Professional", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Professional");
+                });
+
             modelBuilder.Entity("AccessControl.BusinessRule.Models.Service", b =>
                 {
                     b.Property<int>("Id")
@@ -32,6 +51,21 @@ namespace AccessControl.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Service");
+                });
+
+            modelBuilder.Entity("AccessControl.BusinessRule.Models.ServiceProfessional", b =>
+                {
+                    b.Property<string>("ProfessionalId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("ServiceId")
+                        .HasColumnType("int");
+
+                    b.HasKey("ProfessionalId", "ServiceId");
+
+                    b.HasIndex("ServiceId");
+
+                    b.ToTable("ServiceProfessional");
                 });
 
             modelBuilder.Entity("AccessControl.BusinessRule.Models.User", b =>
@@ -51,6 +85,21 @@ namespace AccessControl.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("User");
+                });
+
+            modelBuilder.Entity("AccessControl.BusinessRule.Models.ServiceProfessional", b =>
+                {
+                    b.HasOne("AccessControl.BusinessRule.Models.Professional", "Professional")
+                        .WithMany("ServiceProfessional")
+                        .HasForeignKey("ProfessionalId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("AccessControl.BusinessRule.Models.Service", "Service")
+                        .WithMany("ServiceProfessional")
+                        .HasForeignKey("ServiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

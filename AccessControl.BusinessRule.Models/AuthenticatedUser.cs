@@ -8,15 +8,7 @@ namespace AccessControl.BusinessRule.Models
         private string _lastName;
         private DateTime _birthDate;
         private string _email;
-        string _id;
-
-
-        LoginUser _user;
-
-        public AuthenticatedUser()
-        {
-
-        }
+        private string _id;
 
         public void sertUser(User user, string email)
         {

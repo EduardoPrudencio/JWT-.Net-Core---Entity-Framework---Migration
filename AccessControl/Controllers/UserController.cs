@@ -3,6 +3,7 @@ using AccessControl.Configuration;
 using AccessControl.Infrastructure;
 using AccessControl.Infrastructure.Interfaces;
 using AccessControl.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
@@ -37,6 +38,7 @@ namespace AccessControl.Controllers
             _user = user;
         }
 
+        [Authorize]
         [HttpGet]
         public async Task<ActionResult<List<User>>> Get()
         {
@@ -44,7 +46,7 @@ namespace AccessControl.Controllers
             return users;
         }
 
-
+        [Authorize]
         [HttpGet("{id}", Name = "Get")]
         public string Get(int id)
         {

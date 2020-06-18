@@ -2,12 +2,8 @@
 
 namespace AccessControl.BusinessRule.Models
 {
-    public class Service
+    public class Professional : Person
     {
-        public int Id { get; set; }
-
-        public string Name { get; set; }
-
         public List<ServiceProfessional> ServiceProfessional { get; set; }
 
     }
