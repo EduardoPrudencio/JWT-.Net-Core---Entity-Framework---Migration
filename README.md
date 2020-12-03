@@ -40,6 +40,7 @@ public void ConfigureServices(IServiceCollection services)
      services.AddControllers();
  
    }
+   Também precisamos adcionar a referência para a biblioteca Microsoft.EntityFrameworkCore.SqlServer, a referência deve ser feita no mesmo projeto que contém o arquivo appsettings, no caso deste exemplo, o AccessControl.
 
 Por fim alteramos a classe Program para que ficasse da seguinte forma:
 
